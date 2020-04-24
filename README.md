@@ -71,7 +71,7 @@ gapminder %>%
 gapminder %>%
   mutate(over_col = 
                     over (.,
-                              col = "lifeExp" ,   # "obsValue" 
+                              col = "lifeExp" , 
                               partition_by = "country" , 
                               order_by = "year" ,
                               preceding = -1:0  ,
@@ -86,8 +86,8 @@ gapminder %>%
         mutate(over_col = 
                           over (.,
                                     col = "lifeExp" ,  
-                                    partition_by = "country ; continent" , #one ore multiple cols separated by ";"
-                                    order_by = "year" , #one ore multiple cols separated by ";"
+                                    partition_by = "country ; continent" ,
+                                    order_by = "year" ,
                                     preceding = 3:0 ) )   %>% 
         view()
 
@@ -99,8 +99,8 @@ gapminder %>%
         mutate(over_col = 
                           over (.,
                                     col = "lifeExp" ,  
-                                    partition_by = "country ; continent" , #one ore multiple cols separated by ";"
-                                    order_by = "year" , #one ore multiple cols separated by ";"
+                                    partition_by = "country ; continent" ,
+                                    order_by = "year" ,
                                     preceding = 3:0 ,
                                     following = 1:3) )   %>% 
         view()
